@@ -1,19 +1,22 @@
 #!/usr/bin/python3
-'''A simple Flask web application.
-'''
+"""Starts a Flask web appliclation.
+
+the application listens on 0.0.0.0, poort 5000.
+Routes:
+    /:Display  'Hello HNBN!'
+"""
+
 from flask import Flask
 
 
 app = Flask(__name__)
-'''The Flask application instance.'''
-app.url_map.strict_slashes = False
 
 
-@app.route('/')
-def index():
-    '''The home page.'''
-    return 'Hello HBNB!'
+@app.route("/", strict_slashes=False)
+def home()
+    """This is the home page of the website"""
+    return "Hello HBNB!"
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='5000')
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port="5000")
