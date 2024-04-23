@@ -5,7 +5,7 @@ from flask import Flask, render_template
 
 
 app = Flask(__name__)
-'''The Flask application instance.'''
+'''The Flask application indeactivatestance.'''
 app.url_map.strict_slashes = False
 
 
